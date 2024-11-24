@@ -1,0 +1,23 @@
+client side:
+
+learn all the necessary hooks
+check how to migrate to vite
+create a form that adds the user and not with the dummy button we did.
+create a button for deleting a specific user.
+create a form for updating a user.
+when clicking on a user name, open a modal or anything else that will get the details of a single user.
+learn about tanstack query and connect all of the endpoints you have done with fetch to it.
+learn about redux. alternatively (preferred both) - learn about use context.
+server side:
+
+make more of these routes for user (*update get one etc.)
+learn about ref in mongoose - when i want to connect one model to the other such as i am a user in facebook 
+and i created a post then in the post there wil be the id of the creator
+create validations in the controller
+learn about hashing passwords with bcryptjs
+learn about JWT token and how to work with it in the client (httponlycookie)
+learn about winston logger.
+
+
+http://localhost:5000/api/users/:id/category/:category - example of multiple path params
+
