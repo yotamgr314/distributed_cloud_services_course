@@ -1,7 +1,7 @@
 client side:
 
-learn all the necessary hooks
-check how to migrate to vite
+learn all the necessary hooks.
+check how to migrate to vite.
 create a form that adds the user and not with the dummy button we did.
 create a button for deleting a specific user.
 create a form for updating a user.
@@ -11,11 +11,11 @@ learn about redux. alternatively (preferred both) - learn about use context.
 server side:
 
 make more of these routes for user (*update get one etc.)
-learn about ref in mongoose - when i want to connect one model to the other such as i am a user in facebook 
-and i created a post then in the post there wil be the id of the creator
-create validations in the controller
-learn about hashing passwords with bcryptjs
-learn about JWT token and how to work with it in the client (httponlycookie)
+learn about ref in mongoose - when i want to connect one model to the other such as i am a user in facebook. 
+and i created a post then in the post there wil be the id of the creator.
+create validations in the controller (Via middlwware).
+learn about hashing passwords with bcryptjs.
+learn about JWT token and how to work with it in the client (httponlycookie).
 learn about winston logger.
 
 
