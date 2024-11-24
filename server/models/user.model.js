@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -6,4 +6,6 @@ const userSchema = new mongoose.Schema({
     age: { type: Number, required: true },
 }, { timestamps: true }); // Adds createdAt and updatedAt fields
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
+
+export default User;
