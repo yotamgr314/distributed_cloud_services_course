@@ -16,7 +16,7 @@ const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); //TODO  find out what this does
 
 // Routes
 app.use('/api/users', userRoutes);
@@ -26,4 +26,4 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Distributed Cloud Services API');
 });
 
-export default app;
+export default app; //TODO find out what this does

@@ -4,7 +4,6 @@ import User from '../models/user.model.js';
 export const createUser = async (req, res) => {
     try {
 
-
         const user = new User(req.body); // Create a new user from the request body
         const savedUser = await user.save(); // Save the user to the database
         res.status(201).json(savedUser); // Send back the saved user
@@ -30,3 +29,4 @@ export const getUsers = async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 };
+
