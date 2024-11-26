@@ -33,3 +33,20 @@ export const getUsers = async (req, res) => {
 };
 
 
+
+// Get user by ID
+
+export const getUserById = async (req, res) => {
+    try {
+        const queriedUser = await User.findById(req.params.id); // NOTE - findById is a built in mongooseDB function which finds an document by its id, req.params.id is the way to acesss the URL parameters, as we defined them in the router path. 
+                                                                // that means - if we would have defined the router path to be router.get('/:userId', getUserById); than the await would look like that : User.findById(req.params.userId);
+
+        if (!queriedUser) {
+            return res.status(404).json({ message: 'User not found' }); // If findById returns null (no user with that ID exists), send a 404 Not Found response.
+        }
+
+        res.status(200).json(queriedUser); // Respond with the user data
+    } catch (err) {
+        res.status(500).json({ message: err.message }); // Handle server errors
+    }
+};
