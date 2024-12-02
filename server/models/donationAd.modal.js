@@ -31,7 +31,7 @@ const donationAdSchema = new mongoose.Schema({
     enum: ['Available', 'Claimed', 'Donated'],
     default: 'Available'
     },
-  donor: {   /* TODO - realise what is this for */
+  donor: {   /* NOTE: EXPLAINED DOWNSTAIRS */
     type: mongoose.Schema.Types.ObjectId, /* objectId is an a unique identefifer generated automaticly by MongoDB. */
     ref: 'User',
     required: true
@@ -41,7 +41,7 @@ const donationAdSchema = new mongoose.Schema({
     default: Date.now }
 });
 
-donationAdSchema.index({ location: '2dsphere' }); /* TODO - realise what are these for */
+donationAdSchema.index({ location: '2dsphere' }); /* NOTE: EXPLAINED DOWNSTAIRS. */
 
 module.exports = mongoose.model('DonationAd', donationAdSchema);
 
