@@ -23,6 +23,16 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'A user must have an age']
     },
+
+   /* WISHLIST[pc,laptop,phone] 
+   Rodion idea: array of wishlist.
+   the map will display only users with non empty array.
+   user with both wishlist and donations ad will be displayed with 2 colors combined. 
+   user with only a wishlist will be displayed with color x.
+   user with only donation ad will be displayed with color y. 
+
+   
+   */
 }, { timestamps: true }); // Adds createdAt and updatedAt fields
 
 const User = mongoose.model('User', userSchema); /* creating the model from the schema */
