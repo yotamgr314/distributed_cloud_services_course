@@ -1,14 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose'); // Use require for mongoose
 
-/* NOTE - add to the user a rank 
-profileImage (String, optional): URL for the user’s profile picture.
-location (Object, optional):
-latitude (Number): User's latitude.
-longitude (Number): User's longitude.
-address (String): Human-readable address.
-points (Number, default: 0): Points for user engagement and activity.
-ratings (Array of Numbers, optional): Ratings given by other users.
- */
+
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -19,22 +11,53 @@ const userSchema = new mongoose.Schema({
         required: [true, 'A user must have an email'],
         unique: true
     },
+    password: {
+        type: String,
+        required: true
+    },
     age: {
         type: Number,
-        required: [true, 'A user must have an age']
     },
+    profilePicture: {
+        type: String /* for the url containing the photo */
+    },
+    phone: {
+        type: Number
+    },
+    ratingPoints: {
+        
+        type: Number,
+        default: 0
+    },
+    badges: [
+        {
+            name: {
+                type: String,
+                required: true
+            },
+            description: {
+                type: String
+            },
+            icon: {
+                type: String /* for the url containing the badge icon */
+            },
+            earnedAt: {
+                 type: Date,
+                default: Date.now 
+            }
+        }
 
-   /* WISHLIST[pc,laptop,phone] 
-   Rodion idea: array of wishlist.
-   the map will display only users with non empty array.
-   user with both wishlist and donations ad will be displayed with 2 colors combined. 
-   user with only a wishlist will be displayed with color x.
-   user with only donation ad will be displayed with color y. 
+    ],
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 
-   
-   */
-}, { timestamps: true }); // Adds createdAt and updatedAt fields
+});
 
-const User = mongoose.model('User', userSchema); /* creating the model from the schema */
+module.exports = mongoose.model('UserSchema', userSchema);
 
-export default User;
+
+
+
+
