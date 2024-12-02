@@ -8,7 +8,6 @@ import userRoutes from './routes/user.routes.js';
 //CONFIGURATION SECTION
 dotenv.config(); /*Load environment variables from .env file  */ 
 
-
 connectDB(); /*NOTE: calls a function which establish the connection to our mongoDB database */
 
 const app = express(); /*NOTE calls express constructor, via its instance we will gain access to many express framework methods related to creating a web app,
