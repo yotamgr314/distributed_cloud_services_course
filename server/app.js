@@ -1,9 +1,12 @@
 //IMPORTS SECTION 
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
-import userRoutes from './routes/user.routes.js';
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+
+const { connectDB } = require('./config/db.js');
+
+const userRouter = require('./routes/user.routes.js');
+const donationAdRouter = require('./routes/donation.ad.routes.js'); 
 
 //CONFIGURATION SECTION
 dotenv.config(); /*Load environment variables from .env file  */ 
@@ -33,9 +36,9 @@ app.use(express.json()); // NOTE This middleware parses incoming JSON payloads f
 
 
 //ROUTES SECTION
+app.use('/api/users', userRouter);
+app.use('/api/donationAds', donationAdRouter);
 
-app.use('/api/users', userRoutes);
- 
 app.get('/', (req, res) => { // NOTE Default route - must always be the last route or else all the requests will enter him.
                              // because once request has hit the server, it will enter the first route which fits to him. 
                              // hense: if two rights fits - needs to mannage it via middleware. 
@@ -43,4 +46,4 @@ app.get('/', (req, res) => { // NOTE Default route - must always be the last rou
     res.send('Welcome to the Distributed Cloud Services API');
 });
 
-export default app; //TODO find out what this does
+module.exports = app; // Change 'export default' to 'module.exports'

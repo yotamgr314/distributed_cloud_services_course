@@ -1,5 +1,5 @@
 //IMPORTS SECTION 
-const UserMongooseModel = require('../models/user.model.js'); // Use require instead of import
+const UserMongooseModel = require('../models/user.model.js'); 
 
 /* Create new user */
 exports.createUser = async (req, res) => {
@@ -32,7 +32,6 @@ exports.getUsers = async (req, res) => {
         res.status(500).json({ message: err.message }); // Handle server errors
     }
 };
-
 
 
 // Get user by ID
