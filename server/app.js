@@ -18,7 +18,7 @@ const app = express(); /*NOTE calls express constructor, via its instance we wil
                          03) define middlewares such as: app.use(express.json()), app.use(cors()).
                          04) handling static files such as : app.use('/static',express.static('pbulic')).
                          05) error handling such as : app.use((err,req,res,next))
-                         NOTE app.use() - to define Middlewares such as                 
+                                         
 */
 
 
