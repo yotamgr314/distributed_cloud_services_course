@@ -51,11 +51,12 @@ const userSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
-    }
+    },
 
-});
+}, {collection:'users'});
 
-module.exports = mongoose.model('UserSchema', userSchema);
+const User = mongoose.model('User', userSchema); // Define the model.
+module.exports = User; // Export the model.
 
 
 

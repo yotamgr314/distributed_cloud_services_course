@@ -43,11 +43,18 @@ const donationAdSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now }
-});
+},
+{
+  collection: 'donationAds', // Specify the collection name explicitly.
+}
+
+);
 
 donationAdSchema.index({ location: '2dsphere' }); /* NOTE: EXPLAINED DOWNSTAIRS. */
 
-module.exports = mongoose.model('DonationAd', donationAdSchema);
+const DonationAd = mongoose.model('DonationAd', donationAdSchema); // Define the model.
+
+module.exports = DonationAd; // Export the model.
 
 
 
