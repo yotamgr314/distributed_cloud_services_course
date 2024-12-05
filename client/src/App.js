@@ -2,7 +2,8 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'; // NOTE to control component rendering based on URL. - basictly attach a page to a url.
 import HomePage from './HomePage/pages/homePage';
-import MyAdsPage from './DonatioAds/pages/AdsPage';
+import MyAdsPage from './Ads/pages/AdsPage';
+
 
 
 // THIS SECTION LINKS PAGES BASED ON URL THE USER WILL INSERT.
