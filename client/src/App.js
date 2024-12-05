@@ -2,7 +2,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes, Navigate} from 'react-router-dom'; // NOTE to control component rendering based on URL. - basictly attach a page to a url.
 import HomePage from './HomePage/pages/homePage';
-import MyAdsPage from './ads/pages/ads'; // NOTE: react component name must be With Capital prefix and camel case. 
+import MyAdsPage from './DonatioAds/pages/AdsPage';
 
 
 // THIS SECTION LINKS PAGES BASED ON URL THE USER WILL INSERT.
@@ -16,6 +16,7 @@ return (
         <Route path="/myAds" element={<MyAdsPage />} /> {/* NOTE when use will type the url http://localhost:3000/myAds it will navigate to the myAds page */}
 
         <Route path="*" element={<Navigate to="/" />} /> {/* NOTE: Redirects all unmatched routes to the homepage. */}
+
 
       </Routes>
 

@@ -8,6 +8,10 @@ const { connectDB } = require('./config/db.js');
 const userRouter = require('./routes/user.routes.js');
 const donationAdRouter = require('./routes/donation.ad.routes.js'); 
 
+// NEW
+const adsRouter = require('./routes/ads.routes.js');
+
+
 //CONFIGURATION SECTION
 dotenv.config(); /*Load environment variables from .env file  */ 
 
@@ -38,6 +42,8 @@ app.use(express.json()); // NOTE This middleware parses incoming JSON payloads f
 //ROUTES SECTION
 app.use('/api/users', userRouter);
 app.use('/api/donationAds', donationAdRouter);
+
+app.use('/api/ads', adsRouter); // Add this line for combined ads route
 
 app.get('/', (req, res) => { // NOTE Default route - must always be the last route or else all the requests will enter him.
                              // because once request has hit the server, it will enter the first route which fits to him. 
