@@ -1,21 +1,19 @@
 import React from 'react';
+import './styles/AdCard.css';
 
 const AdCard = ({ ad }) => {
   return (
-    <div className={`ad-card ${ad.type}`}>
-      <h3>{ad.title}</h3>
-      {ad.type === 'donation' ? (
-        <div>
-          <p><strong>Condition:</strong> {ad.condition}</p>
-          <p><strong>Description:</strong> {ad.description}</p>
-          <p><strong>Donor:</strong> {ad.donor?.name}</p>
-        </div>
-      ) : (
-        <div>
-          <p><strong>Status:</strong> {ad.status}</p>
-          <p><strong>Description:</strong> {ad.description}</p>
-          <p><strong>Requestor:</strong> {ad.donor?.name}</p>
-        </div>
+    <div className="ad-card">
+      <h2>{ad.name || 'Unnamed Ad'}</h2>
+      <p><strong>Description:</strong> {ad.description || 'No description provided'}</p>
+      <p><strong>Condition:</strong> {ad.condition || 'Unknown'}</p>
+      <p><strong>Category:</strong> {ad.category || 'Uncategorized'}</p>
+      <p><strong>Status:</strong> {ad.status || 'Unknown'}</p>
+      <p><strong>Donor:</strong> {ad.donor ? ad.donor : 'Anonymous'}</p>
+      {ad.location && ad.location.coordinates && (
+        <p>
+          <strong>Location:</strong> Lat {ad.location.coordinates[1]}, Lng {ad.location.coordinates[0]}
+        </p>
       )}
     </div>
   );

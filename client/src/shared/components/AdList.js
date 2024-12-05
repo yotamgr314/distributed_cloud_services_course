@@ -3,7 +3,7 @@ import AdCard from './AdCard';
 
 const AdList = ({ ads }) => {
   return (
-    <div className="ad-list">
+    <div>
       {ads.map((ad) => (
         <AdCard key={ad._id} ad={ad} />
       ))}
