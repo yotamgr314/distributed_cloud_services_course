@@ -1,4 +1,3 @@
-// NOTE: THE STARTING POINT OF OUR APPLICATION
 // IMPORTS SECTION
 import React from 'react';
 import ReactDOM from 'react-dom/client';
