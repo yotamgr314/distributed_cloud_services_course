@@ -1,12 +1,18 @@
 import React from 'react';
-import './styles/app.css'; // Import updated styles
-import HomePage from './pages/home.page'; // Import the main page component
-
+import {BrowserRouter, Router, Route, Redirect, Switch } from 'react-router-dom';
+import homePage from './src/homePage/pages/.homePage';
+import donationOffers from './src/offers/pages.donationOffers';
+import myAds from './src/ads' 
 const App = () => {
     return (
-        <div className="app-container">
-            <HomePage />
-        </div>
+        <router>
+            <Route path="/" exact>
+            <donations>
+
+            </donations>
+            </Route>
+        </router>
+
     );
 };
 
