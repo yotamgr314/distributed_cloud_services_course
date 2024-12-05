@@ -1,15 +1,13 @@
 import React from 'react';
-import {BrowserRouter, Router, Route, Redirect, Switch } from 'react-router-dom';
-import homePage from './src/homePage/pages/.homePage';
-import donationOffers from './src/offers/pages.donationOffers';
-import myAds from './src/ads' 
+import {BrowserRouter, Router, Route, Redirect, Switch } from 'react-router-dom'; // to control component rendering based on URL. - basictly attach a page to a url.
+import homePage from './homePage/pages/homePage';
+/* import donationAds from './ads/donationAds/pages/donations'
+ */
 const App = () => {
     return (
         <router>
             <Route path="/" exact>
-            <donations>
-
-            </donations>
+            <homePage/>
             </Route>
         </router>
 
@@ -17,3 +15,5 @@ const App = () => {
 };
 
 export default App;
+
+// HIS USERS PAGE - MY AD DONATIONS PAGE.
