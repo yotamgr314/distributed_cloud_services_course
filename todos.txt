@@ -22,5 +22,22 @@ server side:
 http://localhost:5000/api/users/:id/category/:category - example of multiple path params
 
 NOTE: my to do list: 
-01) implement a get users by rating acending reqeust. 
+01) implement the backend routes and controllers for the following requests: 
+    01) list all the ads in our system under a list on the HomePage. --> a request which gets all the ads in the system.
+    02) set markers on the googlemaps API with all the ADS on our system, different mark for donationAd and different mark for WishListAd. 
+    03) list all the donation ads for a specific user.
+    04) list all the wishlist ads for a specific user.
+    05) list all the claim requests for a specific user (all the claim requests for all his donationsAds).
+    06) we would want to enable a user to create wishlist ads. 
+    07) we would want to enable a user to create a donatio ads.
+    08) we would want to display a leaderboard page which displays all users the top 20 users in the app sorted by their rating.
+        01) we would like to enable an option to sort them by their badges type. (display all users with "generous badge" etc..)
+    09) we would want to allow one user to rate other user after a donation ad was donated sucessfully.
+    10) we would want to allow one user to rate other user after a wishlist ad promise was accepted by the user who created the wishlist ad, and the wish as been granted(donated). 
+    11) we would like to enable the user to delete a donation ad. 
+    12) we would like to enable the user to edit a donation ad details, edit the donation ad items, delete items. 
+    13) we would like to enable the user to delete a wishlist ad.
+    14) we would like to enable the user to edit a wishlist ad, edit its details, and its items, delete items from the wishlist.
+    
+
 
